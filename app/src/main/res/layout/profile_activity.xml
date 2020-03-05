@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context="activities.ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:foreground="@drawable/profile_image_rounded"
+            android:src="@mipmap/ic_empty_profile_image_round" />
+
+        <TextView
+            android:id="@+id/profileUsernameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:padding="10dp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20sp"
+                android:text="@string/hint_weight"
+                android:textColor="@color/colorSecondary" />
+
+            <TextView
+                android:id="@+id/profileWeightTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:textSize="20sp"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20sp"
+                android:text="@string/hint_height"
+                android:textColor="@color/colorSecondary" />
+
+            <TextView
+                android:id="@+id/profileHeightTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:textSize="20sp"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20sp"
+                android:text="@string/hint_age"
+                android:textColor="@color/colorSecondary" />
+
+            <TextView
+                android:id="@+id/profileAgeTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:textSize="20sp"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/updateAccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/item_profile_custom"
+            android:textColor="@color/colorAccent"
+            android:text="@string/update_from_profile"
+            android:textAllCaps="false"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/deleteAccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_profile_custom"
+            android:textAllCaps="false"
+            android:text="@string/delete_account_button"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_profile_custom"
+            android:textAllCaps="false"
+            android:text="@string/logout_button"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/viewAllUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_profile_custom"
+            android:textAllCaps="false"
+            android:text="@string/view_all_users_button"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/nav_item_attributes"
+        app:itemTextColor="@drawable/nav_item_attributes"
+        app:menu="@menu/bottom_navigation" />
+
+</RelativeLayout>
